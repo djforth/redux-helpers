@@ -3,7 +3,7 @@
 import {
   Create
   , Update
-} from '../src/association_helper';
+} from '../../src/actions//association_helper';
 
 import _ from 'lodash';
 

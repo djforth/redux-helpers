@@ -69,7 +69,7 @@
     "@djforth/jasmine-call-helpers": "^1.0.0",
     "@djforth/morse-jasmine-wp": "^2.4.2",
     "@djforth/redux-jasmine-helper": "^1.0.2",
-    "@djforth/stubs-spy-manager": "^1.1.2",
+    "@djforth/stubs-spy-manager": "^2.0.0",
     "babel-cli": "^6.16.0",
     "babel-core": "^6.17.0",
     "babel-eslint": "^7.0.0",

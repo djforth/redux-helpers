@@ -1,6 +1,6 @@
 import ModalHelper, {
   Close, Edit, Open
-} from '../src/modal_helpers';
+} from '../../src/actions//modal_helpers';
 
 import {actions} from '@djforth/redux-jasmine-helper';
 const actionMethod = actions.actionMethod;
@@ -19,9 +19,9 @@ const spyManager = SpyManager();
 
 
 describe('Modal helper', function() {
-  describe('Open', function() {
+  describe('Open', function(){
     let opener;
-    beforeEach(function() {
+    beforeEach(function(){
       opener = Open('OPEN');
     });
 

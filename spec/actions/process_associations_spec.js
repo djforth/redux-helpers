@@ -1,4 +1,4 @@
-import ProcessAssociations from '../src/process_associations';
+import ProcessAssociations from '../../src/actions//process_associations';
 
 import {
   spies as SpyManager

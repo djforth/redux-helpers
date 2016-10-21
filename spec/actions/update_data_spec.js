@@ -7,7 +7,7 @@ import Updatedata, {
   , Fail
   , Send
   , Success
-} from '../src/update_data';
+} from '../../src/actions//update_data';
 
 import {actions} from '@djforth/redux-jasmine-helper';
 import _ from 'lodash';

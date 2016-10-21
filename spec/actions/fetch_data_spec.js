@@ -7,7 +7,7 @@ import Fetchdata, {
   , Get
   , Receive
   , Request
-} from '../src/fetch_data';
+} from '../../src/actions//fetch_data';
 
 import {actions} from '@djforth/redux-jasmine-helper';
 const actionMethod = actions.actionMethod;

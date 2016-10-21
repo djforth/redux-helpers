@@ -7,7 +7,7 @@ import Destroydata, {
   , Fail
   , Send
   , Success
-} from '../src/destroy_data';
+} from '../../src/actions//destroy_data';
 
 import {actions} from '@djforth/redux-jasmine-helper';
 import _ from 'lodash';

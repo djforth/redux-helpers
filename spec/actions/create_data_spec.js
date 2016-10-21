@@ -6,7 +6,7 @@ import Createdata, {
   , Fail
   , Send
   , Success
-} from '../src/create_data';
+} from '../../src/actions//create_data';
 
 import {actions} from '@djforth/redux-jasmine-helper';
 const actionMethod = actions.actionMethod;
