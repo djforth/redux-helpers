@@ -15,10 +15,12 @@ export const failCreate = (update_state, errors, receivedAt)=>{
   });
 };
 
-export const successCreate = (state, item, receivedAt)=>{
+export const successCreate = (state, item, receivedAt, flush)=>{
   let update_state = updateState(state);
   let {items} = state;
-  if (_.isArray(item)){
+  if (flush){
+    items = Immutable.fromJS(item);
+  } else if (_.isArray(item)){
     items = items.concat(Immutable.fromJS(item));
   } else {
     items = items.push(Immutable.fromJS(item));

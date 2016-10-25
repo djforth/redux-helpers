@@ -23,8 +23,6 @@ import {
 const spyManager = SpyManager();
 const stubs = Stubs(CreateData);
 
-const getMod     = require('@djforth/morse-jasmine-wp/get_module')(CreateData)
-
 describe('creating data', function(){
   afterEach(()=>{
     spyManager.removeAll();

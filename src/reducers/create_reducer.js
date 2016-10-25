@@ -7,7 +7,7 @@ import {
   , successCreate
 } from './create_data';
 
-export default (types)=>{
+export default (types, flush = false)=>{
   let {FAIL, SEND, SUCCESS, URL} = types;
   return (state, action)=>{
     let update_state = updateState(state);
@@ -21,6 +21,7 @@ export default (types)=>{
           state
           , action.item
           , action.receivedAt
+          , flush
         );
       case FAIL:
         return failCreate(
