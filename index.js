@@ -7,7 +7,7 @@ exports.action = {
   , modal: require('./lib/actions/modal_helpers')
   , process_associations: require('./lib/actions/process_associations')
   , update: require('./lib/actions/update_data')
-}
+};
 
 exports.reducers = {
   add_data: require('./lib/reducers/association_helper')

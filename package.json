@@ -64,7 +64,7 @@
     }
   },
   "devDependencies": {
-    "@djforth/ap_karma_wp": "^1.0.2",
+    "@djforth/ap_karma_wp": "1.0.6",
     "@djforth/ap_utils": "^3.0.1",
     "@djforth/jasmine-call-helpers": "^1.0.0",
     "@djforth/morse-jasmine-wp": "^2.4.2",
@@ -92,5 +92,8 @@
   "peerDependencies": {
     "@djforth/ajax-es6-fp": "^1.1.9",
     "immutable": "^3.8.1"
+  },
+  "dependencies": {
+    "jasmine-core": "^2.5.2"
   }
 }

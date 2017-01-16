@@ -10,7 +10,7 @@ export default (action, type)=>{
   };
 };
 
-export const ModelActions = (type)=>{
+export const ModalActions = (type)=>{
   type = type.toUpperCase();
   return {
     CLOSE: `CLOSE_${type}`
