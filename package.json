@@ -1,6 +1,6 @@
 {
   "name": "@djforth/redux-helpers",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -94,6 +94,7 @@
     "immutable": "^3.8.1"
   },
   "dependencies": {
+    "immutable": "3.7.4",
     "jasmine-core": "^2.5.2"
   }
 }
