@@ -1,4 +1,4 @@
-/*eslint-env jasmine, browser */
+/* eslint-env jasmine, browser */
 
 import Updatedata, {
   addUpdateUrl

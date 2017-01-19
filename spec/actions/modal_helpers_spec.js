@@ -17,15 +17,14 @@ import {
 
 const spyManager = SpyManager();
 
-
-describe('Modal helper', function() {
+describe('Modal helper', function(){
   describe('Open', function(){
     let opener;
     beforeEach(function(){
       opener = Open('OPEN');
     });
 
-    it('should return a function', function() {
+    it('should return a function', function(){
       expect(_.isFunction(opener)).toBeTruthy();
     });
 
@@ -36,7 +35,7 @@ describe('Modal helper', function() {
     , [1]);
   });
 
-  describe('Close', function() {
+  describe('Close', function(){
     let closer;
     beforeEach(function(){
       closer = Close('CLOSE');
@@ -52,7 +51,7 @@ describe('Modal helper', function() {
     , []);
   });
 
-  describe('Edit ', function() {
+  describe('Edit ', function(){
     let edit, editor;
     beforeEach(function(){
       spyManager.addReturn('Opener')('returnValue', 'opener');
@@ -68,13 +67,13 @@ describe('Modal helper', function() {
     });
 
     let calls = {
-      Opener:[()=>spyManager.get('Opener')
+      Opener: [()=>spyManager.get('Opener')
       , ()=>[1]
       ]
       , dispatch: [()=>spyManager.get('dispatch')
       , ()=>['opener']
       ]
-    }
+    };
 
     checkMulti(calls);
   });

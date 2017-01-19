@@ -14,7 +14,6 @@ import {
 const spyManager = SpyManager();
 const stubs = Stubs(DestroyReducer);
 
-
 let destroyer = DestroyReducer({
   FAIL: 'DELETE_FAIL'
   , SEND: 'DELETE_SEND'

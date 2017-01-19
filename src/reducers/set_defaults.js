@@ -1,4 +1,3 @@
-import Immutable from 'immutable';
 
 export default function setDefaults(defaults){
   return (state)=>{

@@ -60,7 +60,7 @@ describe('CreateReducer', function(){
       , item: 'data'
       , receivedAt: 1234
     }
-    , [ 'new-state'
+    , ['new-state'
     , 'data'
     , 1234
     ]

@@ -1,4 +1,4 @@
-/*eslint-env jasmine, browser */
+/* eslint-env jasmine, browser */
 
 import GetData, {
   addUrl
@@ -22,33 +22,33 @@ const stubs = Stubs(GetData);
 
 const getMod     = require('@djforth/morse-jasmine-wp/get_module')(GetData);
 
-describe('GetData', function() {
+describe('GetData', function(){
   afterEach(()=>{
     spyManager.removeAll();
     stubs.revertAll(); // Reverts All stubs
   });
 
-  beforeEach(function() {
+  beforeEach(function(){
     spyManager.add('update_state');
     spyManager.addReturn('update_state')('returnValue', 'updated state');
   });
 
-  describe('addUrl', function() {
+  describe('addUrl', function(){
     let new_state;
     beforeEach(function(){
       new_state = addUrl(spyManager.get('update_state'), 'api/call');
     });
 
     checkCalls(()=>{
-      return spyManager.get('update_state')
+      return spyManager.get('update_state');
     }, 'update_state', ()=>[{url: 'api/call'}]);
 
-    it('should return updated state', function() {
+    it('should return updated state', function(){
       expect(new_state).toEqual('updated state');
     });
   });
 
-  describe('receiveData', function() {
+  describe('receiveData', function(){
     let new_state;
     beforeEach(function(){
       new_state = receiveData(spyManager.get('update_state'), ['some data'], 1234);
@@ -63,12 +63,12 @@ describe('GetData', function() {
       , lastUpdated: 1234
     }]);
 
-    it('should return updated state', function() {
+    it('should return updated state', function(){
       expect(new_state).toEqual('updated state');
     });
   });
 
-  describe('requestData', function() {
+  describe('requestData', function(){
     let new_state;
     beforeEach(function(){
       new_state = requestData(spyManager.get('update_state'));
@@ -81,7 +81,7 @@ describe('GetData', function() {
       , didInvalidate: false
     }]);
 
-    it('should return updated state', function() {
+    it('should return updated state', function(){
       expect(new_state).toEqual('updated state');
     });
   });

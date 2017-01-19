@@ -54,7 +54,6 @@ export const FetchData = (request, receive, additional)=>{
           /* eslint-disable */
           console.log(err);
           /* eslint-enable */
-
         });
     };
   };

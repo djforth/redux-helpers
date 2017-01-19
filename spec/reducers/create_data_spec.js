@@ -1,4 +1,4 @@
-/*eslint-env jasmine, browser */
+/* eslint-env jasmine, browser */
 
 import CreateData, {
   addCreateUrl
@@ -144,10 +144,10 @@ describe('creating data', function(){
       update_state: [()=>{
         return spyManager.get('update_state');
       }, ()=>[{
-          isCreating: true
+        isCreating: true
           , didError: false
           , errors: null
-        }]
+      }]
       ]
     };
 

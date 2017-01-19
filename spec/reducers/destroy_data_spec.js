@@ -105,10 +105,10 @@ describe('destroying data', function(){
       update_state: [()=>{
         return spyManager.get('update_state');
       }, ()=>[{
-          isDestroying: true
+        isDestroying: true
           , didError: false
           , errors: null
-        }]
+      }]
       ]
     };
 

@@ -1,4 +1,4 @@
-/*eslint-env jasmine, browser */
+/* eslint-env jasmine, browser */
 import AddData, {
   addItem
   , updateItemId
@@ -51,12 +51,12 @@ describe('AddData', function(){
     });
   });
 
-  describe('removeExistingInCreating', function() {
+  describe('removeExistingInCreating', function(){
     let removeExistingInCreating, data, new_data;
-    beforeEach(function() {
+    beforeEach(function(){
       removeExistingInCreating = getMod('removeExistingInCreating');
 
-      data = Immutable.fromJS([{id: 1,title: 'title0'}, {title: 'title1', id: 'new-1', creating: true}]);
+      data = Immutable.fromJS([{id: 1, title: 'title0'}, {title: 'title1', id: 'new-1', creating: true}]);
 
       new_data = removeExistingInCreating(data);
     });
@@ -67,7 +67,7 @@ describe('AddData', function(){
     });
   });
 
-  describe('addItem', function() {
+  describe('addItem', function(){
     let new_state, state, data;
     beforeEach(function(){
       data = Immutable.fromJS({title: 'title1'});
@@ -112,7 +112,7 @@ describe('AddData', function(){
     let state, new_state;
     beforeEach(function(){
       state = {
-        items: Immutable.fromJS([{id: 1,title: 'title0'}, {title: 'title1', id: 'new-1', creating: true}])
+        items: Immutable.fromJS([{id: 1, title: 'title0'}, {title: 'title1', id: 'new-1', creating: true}])
       };
 
       spyManager.add('update_state');
@@ -131,7 +131,7 @@ describe('AddData', function(){
 
     checkMulti(calls);
 
-    it('should update id of item in creating', function() {
+    it('should update id of item in creating', function(){
       let item = new_state.items.get(1);
       let old_item = state.items.get(1);
       expect(item.equals(old_item)).toBeFalsy();

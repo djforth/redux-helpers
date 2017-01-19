@@ -1,9 +1,9 @@
-/*eslint-env jasmine, browser */
+/* eslint-env jasmine, browser */
 import UpdateState from '../../src/reducers/update_state';
 
 import _ from 'lodash';
 
-describe('UpdateState', function() {
+describe('UpdateState', function(){
   let update, updateState, state, new_state;
   beforeEach(function(){
     update = {
@@ -16,11 +16,11 @@ describe('UpdateState', function() {
     new_state = updateState(update);
   });
 
-  it('should return a function', function() {
+  it('should return a function', function(){
     expect(_.isFunction(updateState)).toBeTruthy();
   });
 
-  it('should set defaults', function() {
+  it('should set defaults', function(){
     expect(new_state.items).toEqual(['some items']);
     expect(new_state.url).toEqual('api/call/new');
   });

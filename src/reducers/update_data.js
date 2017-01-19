@@ -1,6 +1,4 @@
-import Immutable from 'immutable';
 import updateState from './update_state';
-import _ from 'lodash/core';
 import forIn from 'lodash/forIn';
 
 export const addUpdateUrl = (update_state, update_url)=>{

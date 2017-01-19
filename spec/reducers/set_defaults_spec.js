@@ -1,8 +1,8 @@
-/*eslint-env jasmine, browser */
+/* eslint-env jasmine, browser */
 import SetDefaults from '../../src/reducers/set_defaults';
 import _ from 'lodash';
 
-describe('SetDefaults', function() {
+describe('SetDefaults', function(){
   let defaults, set_defaults, state, new_state;
   beforeEach(function(){
     defaults = {
@@ -17,11 +17,11 @@ describe('SetDefaults', function() {
     new_state = set_defaults(state);
   });
 
-  it('should return a function', function() {
+  it('should return a function', function(){
     expect(_.isFunction(set_defaults)).toBeTruthy();
   });
 
-  it('should set defaults', function() {
+  it('should set defaults', function(){
     expect(new_state.isFetching).toBeFalsy();
     expect(new_state.items).toEqual(['some items']);
     expect(new_state.url).toEqual('api/call');

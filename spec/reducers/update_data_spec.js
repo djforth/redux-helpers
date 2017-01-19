@@ -171,7 +171,6 @@ describe('Update Data Actions', function(){
         id: 1
         , title: 'New title'
       };
-
     });
 
     it('should not update item if not in list', function(){

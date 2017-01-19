@@ -37,7 +37,7 @@ describe('Create Data Actions', function(){
       urlAdd = addCreateUrl('ADD_URL');
     });
 
-    it('should return a function', function() {
+    it('should return a function', function(){
       expect(_.isFunction(urlAdd)).toBeTruthy();
     });
 
@@ -98,7 +98,7 @@ describe('Create Data Actions', function(){
     //     , []
     //   );
 
-    it('create_data should dispatch success data', function(done) {
+    it('create_data should dispatch success data', function(done){
       let dispatch = spyManager.get('dispatch');
       expect(dispatch.calls.count()).toEqual(1);
       resolve('success');
@@ -188,9 +188,9 @@ describe('Create Data Actions', function(){
     , ['new item']);
   });
 
-  describe('CreateAction', function() {
+  describe('CreateAction', function(){
     let fetcher;
-    beforeEach(function() {
+    beforeEach(function(){
       stubs.return('CreateData')('returnValue', 'fetcher');
       stubs.return('Fail')('returnValue', 'failer');
       stubs.return('Send')('returnValue', 'sender');

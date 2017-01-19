@@ -1,4 +1,4 @@
-/*eslint-env jasmine, browser */
+/* eslint-env jasmine, browser */
 
 import Destroydata, {
   addDestroyUrl
@@ -36,7 +36,7 @@ describe('Destroy Data Actions', function(){
       urlAdd = addDestroyUrl('ADD_URL');
     });
 
-    it('should return a function', function() {
+    it('should return a function', function(){
       expect(_.isFunction(urlAdd)).toBeTruthy();
     });
 
@@ -179,9 +179,9 @@ describe('Destroy Data Actions', function(){
     , [1]);
   });
 
-  describe('DestroyAction', function() {
+  describe('DestroyAction', function(){
     let destroyer;
-    beforeEach(function() {
+    beforeEach(function(){
       stubs.return('DestroyData')('returnValue', 'destroyer');
       stubs.return('Fail')('returnValue', 'failer');
       stubs.return('Send')('returnValue', 'sender');
@@ -189,7 +189,7 @@ describe('Destroy Data Actions', function(){
       destroyer = DestroyAction('fail_type', 'send_type', 'processor');
     });
 
-    it('should return function', function() {
+    it('should return function', function(){
       expect(destroyer).toEqual('destroyer');
     });
 

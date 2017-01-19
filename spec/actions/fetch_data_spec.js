@@ -38,7 +38,7 @@ describe('Fetch Actions', function(){
       urlAdd = addUrl('ADD_URL');
     });
 
-    it('should return a function', function() {
+    it('should return a function', function(){
       expect(_.isFunction(urlAdd)).toBeTruthy();
     });
 
@@ -55,7 +55,7 @@ describe('Fetch Actions', function(){
       requester = Request('REQUEST');
     });
 
-    it('should return a function', function() {
+    it('should return a function', function(){
       expect(_.isFunction(requester)).toBeTruthy();
     });
 
@@ -68,7 +68,7 @@ describe('Fetch Actions', function(){
       receiver = Receive('RECEIVE');
     });
 
-    it('should return a function', function() {
+    it('should return a function', function(){
       expect(_.isFunction(receiver)).toBeTruthy();
     });
 
@@ -112,7 +112,7 @@ describe('Fetch Actions', function(){
       // get_data = fetchData('/api/call')(spyManager.get('dispatch'));
     });
 
-    describe('when no additional', function() {
+    describe('when no additional', function(){
       beforeEach(()=>{
         fetchData = FetchData(spyManager.get('request'), spyManager.get('receive'));
         get_data = fetchData('/api/call')(spyManager.get('dispatch'));
@@ -175,9 +175,8 @@ describe('Fetch Actions', function(){
       });
     });
 
-    describe('when no additional', function() {
+    describe('when no additional', function(){
       beforeEach(()=>{
-
         fetchData = FetchData(spyManager.get('request'), spyManager.get('receive'), ['additional']);
         get_data = fetchData('/api/call')(spyManager.get('dispatch'));
       });
@@ -233,9 +232,9 @@ describe('Fetch Actions', function(){
     });
   });
 
-  describe('FetchAction', function() {
+  describe('FetchAction', function(){
     let fetcher;
-    beforeEach(function() {
+    beforeEach(function(){
       stubs.return('FetchData')('returnValue', 'fetcher');
       stubs.return('Receive')('returnValue', 'receiver');
       stubs.return('Request')('returnValue', 'requester');
@@ -243,7 +242,7 @@ describe('Fetch Actions', function(){
       fetcher = FetchAction('receive_type', 'request_type');
     });
 
-    it('should return the correct fetcher', function() {
+    it('should return the correct fetcher', function(){
       expect(fetcher).toEqual('fetcher');
     });
 
